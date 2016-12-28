@@ -1,0 +1,75 @@
+0. CodeBlocks projektfájl átalakítása Makefile-vé
+ cbp2make -in tippmix.cbp -out Makefile
+
+1. fordítás
+ make
+
+2. ./html/ tartalmának törlése
+ rm ./html/*
+
+3. fõoldal letöltése:
+ wget http://www.tipplap.hu/kalkulator/ -O ./html/_dates_labdarugas.html -q
+
+4. ./html/labdarugas.html fájl megnyitása, és a fogadható idõpontok kinyerése, majd a 
+megfelelõ URL-ek tárolása ./html/url_labdarugas.txt-be (apt-get install html-xml-utils)
+ hxnormalize -l 2400 -d -x ./html/_dates_labdarugas.html | hxselect -s'\n' -c '#filterDay' | sed -n -e "s/^.*value=['\"]\(.*\)['\"].*/\1/p" | sed -e 's/\(^.*\)/http:\/\/www.tipplap.hu\/kalkulator\/\1\/1\/labdarugas\//' > ./html/_url_labdarugas.txt
+
+ pl. http://www.tipplap.hu/kalkulator/2016-12-26/1/labdarugas
+     http://www.tipplap.hu/kalkulator/2016-12-27/1/labdarugas
+     http://www.tipplap.hu/kalkulator/2016-12-28/1/labdarugas
+
+5.a) ./html/url_labdarugas.txt soraiban szereplõ weblapok letöltése a ./html/ könyvtárba
+ wget -i ./html/_url_labdarugas.txt -q
+
+ pl. ./html/labdarugas
+     ./html/labdarugas.1
+     ./html/labdarugas.2
+
+5.b) Elsõ fájl átnevezése a megfelelõ sorszámozáshoz (enélkül nem tölti fel a sorszámot nulákkal)
+ mv ./html/labdarugas ./html/labdarugas.0
+ rename 's/\d+/sprintf("%02d",$&)/e' ./html/labdarugas.*
+
+6. ./html/labdarugas*.html állományok beolvasása és a fogadható események tárolása a 
+./html/events_labdarugas.txt fájlba
+
+ > ./html/no_labdarugas.txt
+ > ./html/min_labdarugas.txt
+ > ./html/title_labdarugas.txt
+ > ./html/odds_labdarugas.txt
+ > ./html/day_labdarugas.txt
+ > ./html/time_labdarugas.txt
+ hxnormalize -l 2400 -d -x ./html/labdarugas | hxselect -s'\n' -c '.line1' | hxselect -s'\n' -c '.no' >> ./html/no_labdarugas.txt
+ hxnormalize -l 2400 -d -x ./html/labdarugas | hxselect -s'\n' -c '.line2' | hxselect -s'\n' -c '.no' >> ./html/no_labdarugas.txt
+ hxnormalize -l 2400 -d -x ./html/labdarugas | hxselect -s'\n' -c '.line1' | hxselect -s'\n' -c '.min'  >> ./html/min_labdarugas.txt
+ hxnormalize -l 2400 -d -x ./html/labdarugas | hxselect -s'\n' -c '.line2' | hxselect -s'\n' -c '.min'  >> ./html/min_labdarugas.txt
+ hxnormalize -l 2400 -d -x ./html/labdarugas | hxselect -s'\n' -c '.line1' | hxselect -s'\n' -c '.title' >> ./html/title_labdarugas.txt
+ hxnormalize -l 2400 -d -x ./html/labdarugas | hxselect -s'\n' -c '.line2' | hxselect -s'\n' -c '.title' >> ./html/title_labdarugas.txt
+ hxnormalize -l 2400 -d -x ./html/labdarugas | hxselect -s'\n' -c '.line1' | hxselect -s'\n' -c '.odds' | hxselect -s'\n' -c 'a' >> ./html/odds_labdarugas.txt
+ hxnormalize -l 2400 -d -x ./html/labdarugas | hxselect -s'\n' -c '.line2' | hxselect -s'\n' -c '.odds' | hxselect -s'\n' -c 'a' >> ./html/odds_labdarugas.txt
+ hxnormalize -l 2400 -d -x ./html/labdarugas | hxselect -s'\n' -c '.line1' | hxselect -s'\n' -c '.day' >> ./html/day_labdarugas.txt
+ hxnormalize -l 2400 -d -x ./html/labdarugas | hxselect -s'\n' -c '.line2' | hxselect -s'\n' -c '.day' >> ./html/day_labdarugas.txt
+ hxnormalize -l 2400 -d -x ./html/labdarugas | hxselect -s'\n' -c '.line1' | hxselect -s'\n' -c '.time' | sed -n -e 's/^\([0-9][0-9]:[0-9][0-9]\)/\1/p' >> ./html/time_labdarugas.txt
+ hxnormalize -l 2400 -d -x ./html/labdarugas | hxselect -s'\n' -c '.line2' | hxselect -s'\n' -c '.time' | sed -n -e 's/^\([0-9][0-9]:[0-9][0-9]\)/\1/p' >> ./html/time_labdarugas.txt
+
+ pl. 01871	1	Melbourne - Central	1.22	5.00	8.00	12.28.	09:50
+     13720	1	Spezia - Vicenza	1.75	3.00	4.05	12.28.	20:30
+     15042	1	Southampton - Tottenham	2.80	3.15	2.60	12.28.	20:45
+
+ NOTE: - csak azokat az események kerülnek tárolásra, amelyek:
+         * TODO: átgondolni
+
+7. Fájlok egyesítése.
+ paste -d "\t" - - - < ./html/odds_labdarugas.txt > ./html/odds_labdarugas_columns.txt
+ paste ./html/no_labdarugas.txt ./html/min_labdarugas.txt ./html/title_labdarugas.txt ./html/odds_labdarugas_columns.txt ./html/day_labdarugas.txt ./html/time_labdarugas.txt > ./html/data_labdarugas.txt
+
+8. számítások elvégzése a ./html/events_labdarugas.txt adatain
+ ./tippmix < cat ./html/events_labdarugas.txt (érdemes-e használni az stdin-t?)
+
+
+
+html parser: https://www.w3.org/Tools/HTML-XML-utils/
+apt-get install html-xml-utils
+hxnormalize -x html_file > html_file_norm
+hxselect '#the_div_id' < html_file_norm
+vagy egysorban:
+hxnormalize -l 240 -x html_file | hxselect -s'\n' -c '#the_div_id'

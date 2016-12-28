@@ -1,0 +1,510 @@
+# depslib dependency file v1.0
+1482960821 source:d:\c\tippmix\src\main.c
+	<assert.h>
+	<stdio.h>
+	<stdlib.h>
+
+1482699937 source:d:\c\tippmix\src\myhtml\callback.c
+	"myhtml/callback.h"
+
+1482699937 d:\c\tippmix\src\myhtml\callback.h
+	"myhtml/myosi.h"
+	"myhtml/tree.h"
+
+1482699938 d:\c\tippmix\src\myhtml\myosi.h
+	<stdbool.h>
+	<stdio.h>
+	<stdlib.h>
+	<memory.h>
+	<stdint.h>
+	<stdarg.h>
+	<windows.h>
+
+1482699939 d:\c\tippmix\src\myhtml\tree.h
+	"myhtml/myosi.h"
+	"myhtml/myhtml.h"
+	"myhtml/mystring.h"
+	"myhtml/token.h"
+	"myhtml/stream.h"
+	"myhtml/utils/mcsync.h"
+	"myhtml/utils/mchar_async.h"
+	"myhtml/utils/mcobject.h"
+	"myhtml/utils/mcobject_async.h"
+
+1482699938 d:\c\tippmix\src\myhtml\myhtml.h
+	"myhtml/myosi.h"
+	"myhtml/utils/mctree.h"
+	"myhtml/utils/mcobject_async.h"
+	"myhtml/tree.h"
+	"myhtml/tag.h"
+	"myhtml/def.h"
+	"myhtml/parser.h"
+	"myhtml/tokenizer.h"
+	"myhtml/thread.h"
+	"myhtml/rules.h"
+	"myhtml/token.h"
+	"myhtml/charef.h"
+	"myhtml/encoding.h"
+	"myhtml/incoming.h"
+	"myhtml/callback.h"
+
+1482699939 d:\c\tippmix\src\myhtml\utils\mctree.h
+	"myhtml/myosi.h"
+	"myhtml/utils.h"
+	<stdio.h>
+	<stdlib.h>
+	<memory.h>
+
+1482699939 d:\c\tippmix\src\myhtml\utils.h
+	"myhtml/myosi.h"
+
+1482699939 d:\c\tippmix\src\myhtml\utils\mcobject_async.h
+	"myhtml/myosi.h"
+	"myhtml/utils/mcsync.h"
+
+1482699939 d:\c\tippmix\src\myhtml\utils\mcsync.h
+	<stdio.h>
+	<stdlib.h>
+	<memory.h>
+	"myhtml/myosi.h"
+	<pthread.h>
+
+1482699938 d:\c\tippmix\src\myhtml\tag.h
+	"myhtml/myosi.h"
+	"myhtml/tag_const.h"
+	"myhtml/tokenizer.h"
+	"myhtml/tree.h"
+	"myhtml/utils.h"
+	"myhtml/utils/mctree.h"
+	"myhtml/utils/mchar_async.h"
+	"myhtml/utils/mcobject.h"
+	"myhtml/utils/mcobject_async.h"
+	"myhtml/utils/mcsimple.h"
+
+1482699938 d:\c\tippmix\src\myhtml\tag_const.h
+
+1482699938 d:\c\tippmix\src\myhtml\tokenizer.h
+	"myhtml/myosi.h"
+	"myhtml/utils.h"
+	"myhtml/myhtml.h"
+	"myhtml/tag.h"
+	"myhtml/thread.h"
+	"myhtml/tokenizer_doctype.h"
+	"myhtml/tokenizer_script.h"
+	"myhtml/tokenizer_end.h"
+
+1482699938 d:\c\tippmix\src\myhtml\thread.h
+	"myhtml/myosi.h"
+	<pthread.h>
+	<semaphore.h>
+	<time.h>
+	<sys/stat.h>
+	<fcntl.h>
+	<errno.h>
+	"myhtml/myhtml.h"
+	"myhtml/tree.h"
+	"myhtml/mystring.h"
+
+1482699938 d:\c\tippmix\src\myhtml\mystring.h
+	"myhtml/myosi.h"
+	"myhtml/encoding.h"
+	"myhtml/utils/mchar_async.h"
+
+1482699938 d:\c\tippmix\src\myhtml\encoding.h
+	"myhtml/myosi.h"
+	"myhtml/utils.h"
+
+1482699939 d:\c\tippmix\src\myhtml\utils\mchar_async.h
+	"myhtml/myosi.h"
+	"myhtml/utils/mcsync.h"
+
+1482699938 d:\c\tippmix\src\myhtml\tokenizer_doctype.h
+	"myhtml/myosi.h"
+	"myhtml/utils.h"
+	"myhtml/myhtml.h"
+
+1482699939 d:\c\tippmix\src\myhtml\tokenizer_script.h
+	"myhtml/myosi.h"
+	"myhtml/utils.h"
+	"myhtml/myhtml.h"
+	"myhtml/tokenizer.h"
+
+1482699938 d:\c\tippmix\src\myhtml\tokenizer_end.h
+	"myhtml/myosi.h"
+	"myhtml/myhtml.h"
+	"myhtml/tokenizer.h"
+
+1482699939 d:\c\tippmix\src\myhtml\utils\mcobject.h
+	"myhtml/myosi.h"
+
+1482699939 d:\c\tippmix\src\myhtml\utils\mcsimple.h
+	"myhtml/myosi.h"
+
+1482699938 d:\c\tippmix\src\myhtml\def.h
+
+1482699938 d:\c\tippmix\src\myhtml\parser.h
+	"myhtml/myosi.h"
+	"myhtml/myhtml.h"
+	"myhtml/mystring.h"
+	"myhtml/tree.h"
+	"myhtml/token.h"
+	"myhtml/data_process.h"
+
+1482699938 d:\c\tippmix\src\myhtml\token.h
+	<string.h>
+	"myhtml/myosi.h"
+	"myhtml/utils.h"
+	"myhtml/tag.h"
+	"myhtml/myhtml.h"
+	"myhtml/mystring.h"
+	"myhtml/utils/mcobject_async.h"
+	"myhtml/utils/mchar_async.h"
+	"myhtml/utils/mcsync.h"
+
+1482699938 d:\c\tippmix\src\myhtml\data_process.h
+	"myhtml/myosi.h"
+	"myhtml/charef.h"
+	"myhtml/mystring.h"
+
+1482699937 d:\c\tippmix\src\myhtml\charef.h
+	"myhtml/myosi.h"
+
+1482699938 d:\c\tippmix\src\myhtml\rules.h
+	"myhtml/myosi.h"
+	"myhtml/myhtml.h"
+	"myhtml/tree.h"
+
+1482699938 d:\c\tippmix\src\myhtml\incoming.h
+	"myhtml/myosi.h"
+	"myhtml/tree.h"
+	"myhtml/utils/mcobject.h"
+
+1482699938 d:\c\tippmix\src\myhtml\stream.h
+	"myhtml/myosi.h"
+	"myhtml/myhtml.h"
+
+1482699937 source:d:\c\tippmix\src\myhtml\charef.c
+	"myhtml/charef.h"
+	"myhtml/charef_resource.h"
+
+1482699937 d:\c\tippmix\src\myhtml\charef_resource.h
+
+1482699937 source:d:\c\tippmix\src\myhtml\data_process.c
+	"myhtml/data_process.h"
+	"myhtml/utils/resources.h"
+
+1482699939 d:\c\tippmix\src\myhtml\utils\resources.h
+	<stddef.h>
+
+1482699938 source:d:\c\tippmix\src\myhtml\encoding.c
+	"myhtml/encoding.h"
+	"myhtml/encoding_resource.h"
+	"myhtml/utils/resources.h"
+
+1482699938 d:\c\tippmix\src\myhtml\encoding_resource.h
+	"myhtml/encoding.h"
+
+1482699938 source:d:\c\tippmix\src\myhtml\encoding_detect.c
+	"myhtml/encoding.h"
+	"myhtml/encoding_detect_resource.h"
+	"myhtml/utils/resources.h"
+
+1482699938 d:\c\tippmix\src\myhtml\encoding_detect_resource.h
+	"myhtml/encoding.h"
+
+1482699938 source:d:\c\tippmix\src\myhtml\incoming.c
+	"myhtml/incoming.h"
+	"myhtml/utils/resources.h"
+
+1482699938 source:d:\c\tippmix\src\myhtml\myhtml.c
+	"myhtml/myhtml.h"
+
+1482699938 source:d:\c\tippmix\src\myhtml\mynamespace.c
+	"myhtml/mynamespace.h"
+	"myhtml/mynamespace_resource.h"
+	"myhtml/utils/resources.h"
+
+1482699938 d:\c\tippmix\src\myhtml\mynamespace.h
+	<string.h>
+	"myhtml/myosi.h"
+	"myhtml/utils.h"
+
+1482699938 d:\c\tippmix\src\myhtml\mynamespace_resource.h
+
+1482699938 source:d:\c\tippmix\src\myhtml\myosi.c
+	"myhtml/myosi.h"
+
+1482699938 source:d:\c\tippmix\src\myhtml\mystring.c
+	"myhtml/mystring.h"
+	"myhtml/utils/resources.h"
+
+1482699938 source:d:\c\tippmix\src\myhtml\parser.c
+	"myhtml/parser.h"
+
+1482699938 source:d:\c\tippmix\src\myhtml\perf.c
+	"myhtml/myhtml.h"
+	<time.h>
+	<unistd.h>
+	<sys/types.h>
+	<sys/sysctl.h>
+	<mach/mach_time.h>
+
+1482699938 source:d:\c\tippmix\src\myhtml\rules.c
+	"myhtml/rules.h"
+
+1482699938 source:d:\c\tippmix\src\myhtml\serialization.c
+	<setjmp.h>
+	"myhtml/serialization.h"
+
+1482699938 d:\c\tippmix\src\myhtml\serialization.h
+	"myhtml/myosi.h"
+	"myhtml/mystring.h"
+	"myhtml/tree.h"
+
+1482699938 source:d:\c\tippmix\src\myhtml\stream.c
+	"myhtml/stream.h"
+
+1482699938 source:d:\c\tippmix\src\myhtml\tag.c
+	"myhtml/tag.h"
+
+1482699938 source:d:\c\tippmix\src\myhtml\tag_init.c
+	"myhtml/utils/resources.h"
+	"tag.h"
+
+1482699938 source:d:\c\tippmix\src\myhtml\thread.c
+	"myhtml/thread.h"
+
+1482699938 source:d:\c\tippmix\src\myhtml\token.c
+	"myhtml/token.h"
+
+1482699938 source:d:\c\tippmix\src\myhtml\tokenizer.c
+	"myhtml/tokenizer.h"
+	"myhtml/utils/resources.h"
+
+1482699938 source:d:\c\tippmix\src\myhtml\tokenizer_doctype.c
+	"myhtml/tokenizer_doctype.h"
+
+1482699938 source:d:\c\tippmix\src\myhtml\tokenizer_end.c
+	"myhtml/tokenizer_end.h"
+
+1482699939 source:d:\c\tippmix\src\myhtml\tokenizer_script.c
+	"myhtml/tokenizer_script.h"
+
+1482699939 source:d:\c\tippmix\src\myhtml\tree.c
+	"myhtml/tree.h"
+
+1482699939 source:d:\c\tippmix\src\myhtml\utils.c
+	"myhtml/utils.h"
+
+1482699939 source:d:\c\tippmix\src\myhtml\utils\avl_tree.c
+	"myhtml/utils/avl_tree.h"
+
+1482699939 d:\c\tippmix\src\myhtml\utils\avl_tree.h
+	"myhtml/myosi.h"
+	"myhtml/utils/mcobject.h"
+
+1482699939 source:d:\c\tippmix\src\myhtml\utils\mchar_async.c
+	"myhtml/utils/mchar_async.h"
+
+1482699939 source:d:\c\tippmix\src\myhtml\utils\mcobject.c
+	"myhtml/utils/mcobject.h"
+
+1482699939 source:d:\c\tippmix\src\myhtml\utils\mcobject_async.c
+	"myhtml/utils/mcobject_async.h"
+
+1482699939 source:d:\c\tippmix\src\myhtml\utils\mcsimple.c
+	"myhtml/utils/mcsimple.h"
+
+1482699939 source:d:\c\tippmix\src\myhtml\utils\mcsync.c
+	"myhtml/utils/mcsync.h"
+
+1482699939 source:d:\c\tippmix\src\myhtml\utils\mctree.c
+	"myhtml/utils/resources.h"
+	"myhtml/utils/mctree.h"
+
+1482700866 source:d:\c\tippmix\src\gumbo\attribute.c
+	"attribute.h"
+	<assert.h>
+	<stdlib.h>
+	<string.h>
+	<strings.h>
+	"util.h"
+
+1482700866 d:\c\tippmix\src\gumbo\attribute.h
+	"gumbo.h"
+
+1482700866 d:\c\tippmix\src\gumbo\gumbo.h
+	<stdbool.h>
+	<stddef.h>
+	"tag_enum.h"
+
+1482700866 d:\c\tippmix\src\gumbo\tag_enum.h
+
+1482700866 d:\c\tippmix\src\gumbo\util.h
+	<stdbool.h>
+	<stddef.h>
+
+1482700866 source:d:\c\tippmix\src\gumbo\char_ref.c
+	"char_ref.h"
+	<assert.h>
+	<ctype.h>
+	<stddef.h>
+	<stdio.h>
+	<string.h>
+	"error.h"
+	"string_piece.h"
+	"utf8.h"
+	"util.h"
+
+1482700866 d:\c\tippmix\src\gumbo\char_ref.h
+	<stdbool.h>
+
+1482700866 d:\c\tippmix\src\gumbo\error.h
+	<stdint.h>
+	"gumbo.h"
+	"insertion_mode.h"
+	"string_buffer.h"
+	"token_type.h"
+
+1482700866 d:\c\tippmix\src\gumbo\insertion_mode.h
+
+1482700866 d:\c\tippmix\src\gumbo\string_buffer.h
+	<stdbool.h>
+	<stddef.h>
+	"gumbo.h"
+
+1482700866 d:\c\tippmix\src\gumbo\token_type.h
+
+1482700866 d:\c\tippmix\src\gumbo\string_piece.h
+	"gumbo.h"
+
+1482700866 d:\c\tippmix\src\gumbo\utf8.h
+	<stdbool.h>
+	<stddef.h>
+	"gumbo.h"
+
+1482700866 source:d:\c\tippmix\src\gumbo\error.c
+	"error.h"
+	<assert.h>
+	<stdarg.h>
+	<stdio.h>
+	<string.h>
+	"gumbo.h"
+	"parser.h"
+	"string_buffer.h"
+	"util.h"
+	"vector.h"
+
+1482700866 d:\c\tippmix\src\gumbo\parser.h
+
+1482700866 d:\c\tippmix\src\gumbo\vector.h
+	"gumbo.h"
+
+1482700866 source:d:\c\tippmix\src\gumbo\parser.c
+	<assert.h>
+	<ctype.h>
+	<stdarg.h>
+	<stdlib.h>
+	<string.h>
+	<strings.h>
+	"attribute.h"
+	"error.h"
+	"gumbo.h"
+	"insertion_mode.h"
+	"parser.h"
+	"tokenizer.h"
+	"tokenizer_states.h"
+	"utf8.h"
+	"util.h"
+	"vector.h"
+
+1482700866 d:\c\tippmix\src\gumbo\tokenizer.h
+	<stdbool.h>
+	<stddef.h>
+	"gumbo.h"
+	"token_type.h"
+	"tokenizer_states.h"
+
+1482700866 d:\c\tippmix\src\gumbo\tokenizer_states.h
+
+1482700866 source:d:\c\tippmix\src\gumbo\string_buffer.c
+	"string_buffer.h"
+	<assert.h>
+	<stdlib.h>
+	<string.h>
+	<strings.h>
+	"string_piece.h"
+	"util.h"
+
+1482700866 source:d:\c\tippmix\src\gumbo\string_piece.c
+	"string_piece.h"
+	<assert.h>
+	<stdlib.h>
+	<string.h>
+	<strings.h>
+	"util.h"
+
+1482700866 source:d:\c\tippmix\src\gumbo\tag.c
+	"gumbo.h"
+	<assert.h>
+	<ctype.h>
+	<string.h>
+	"tag_strings.h"
+	"tag_sizes.h"
+	"tag_gperf.h"
+
+1482700866 d:\c\tippmix\src\gumbo\tag_strings.h
+
+1482700866 d:\c\tippmix\src\gumbo\tag_sizes.h
+
+1482700866 d:\c\tippmix\src\gumbo\tag_gperf.h
+
+1482700866 source:d:\c\tippmix\src\gumbo\tokenizer.c
+	"tokenizer.h"
+	<assert.h>
+	<stdbool.h>
+	<string.h>
+	"attribute.h"
+	"char_ref.h"
+	"error.h"
+	"gumbo.h"
+	"parser.h"
+	"string_buffer.h"
+	"string_piece.h"
+	"token_type.h"
+	"tokenizer_states.h"
+	"utf8.h"
+	"util.h"
+	"vector.h"
+
+1482700866 source:d:\c\tippmix\src\gumbo\utf8.c
+	"utf8.h"
+	<assert.h>
+	<stdint.h>
+	<string.h>
+	<strings.h>
+	"error.h"
+	"gumbo.h"
+	"parser.h"
+	"util.h"
+	"vector.h"
+
+1482700866 source:d:\c\tippmix\src\gumbo\util.c
+	"util.h"
+	<assert.h>
+	<stdlib.h>
+	<string.h>
+	<strings.h>
+	<stdarg.h>
+	<stdio.h>
+	"gumbo.h"
+	"parser.h"
+
+1482700866 source:d:\c\tippmix\src\gumbo\vector.c
+	"vector.h"
+	<assert.h>
+	<stdlib.h>
+	<string.h>
+	<strings.h>
+	"util.h"
+
