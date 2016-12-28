@@ -2,6 +2,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+extern int omp_get_thread_num();
+extern int omp_get_num_threads();
+
 int main(int argc, const char** argv) {
 
 int nthreads, tid;

@@ -508,3 +508,8 @@
 	<strings.h>
 	"util.h"
 
+1482960821 source:d:\c\tippmix\projects\solver\src\main.c
+	<assert.h>
+	<stdio.h>
+	<stdlib.h>
+
