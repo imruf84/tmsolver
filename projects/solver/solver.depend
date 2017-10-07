@@ -508,8 +508,43 @@
 	<strings.h>
 	"util.h"
 
-1482960821 source:d:\c\tippmix\projects\solver\src\main.c
-	<assert.h>
+1491577744 source:d:\c\tippmix\projects\solver\src\main.c
+	<string.h>
+	"simplex.h"
+	"event.h"
+	"utils.h"
+	<time.h>
+
+1491567305 source:d:\c\tippmix\projects\solver\src\odd.c
+	"odd.h"
+
+1491567379 d:\c\tippmix\projects\solver\src\odd.h
 	<stdio.h>
+	<math.h>
+	"stdint.h"
+
+1491569048 source:d:\c\tippmix\projects\solver\src\simplex.c
+	"simplex.h"
+
+1491569048 d:\c\tippmix\projects\solver\src\simplex.h
+	<time.h>
 	<stdlib.h>
+	<stdio.h>
+	<stdbool.h>
+	<stdint.h>
+	"odd.h"
+
+1491567579 source:d:\c\tippmix\projects\solver\src\event.c
+	"event.h"
+
+1491567612 d:\c\tippmix\projects\solver\src\event.h
+	<stdint.h>
+	<stdio.h>
+
+1491567767 d:\c\tippmix\projects\solver\src\utils.h
+	<stdio.h>
+	<stdint.h>
+
+1491567725 source:d:\c\tippmix\projects\solver\src\utils.c
+	"utils.h"
 

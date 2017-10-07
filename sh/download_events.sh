@@ -55,5 +55,11 @@ echo Merging files...
 paste -d "\t" - - - < ./html/odds_labdarugas.txt > ./html/odds_labdarugas_columns.txt
 paste ./html/no_labdarugas.txt ./html/min_labdarugas.txt ./html/title_labdarugas.txt ./html/odds_labdarugas_columns.txt ./html/day_labdarugas.txt ./html/time_labdarugas.txt > ./html/data_labdarugas.txt
 
+# Adatok megfelelő helyre másolása.
+echo Copy to bin/data...
+mkdir ../bin
+mkdir ../bin/data
+cp ./html/data_labdarugas.txt ../bin/data/
+
 # Kész.
 echo Finished.
